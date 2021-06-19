@@ -1,15 +1,47 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
 import TourPage from './pages/tours/tour'
+import ReviewPage from "./pages/reviews/review";
+import AccordionPage from "./pages/accordion/accordion";
+import MenuPage from "./pages/menu/menu";
 
 function App() {
   return (
     <div>
+   
     <Router>
+
+    <div className="navbar">
+      <div className="nav-center">
+        <Link to='/'>Home page</Link>
+        <ul className="nav-links">
+          <li>
+            <Link to='/tour'>Tour</Link>
+          </li>
+          <li>
+            <Link to='/review'>Review</Link>
+          </li>
+          <li>
+            <Link to='/accordion'>Accordion</Link>
+          </li>
+          <li>
+            <Link to='/menu'>Menu</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
       <Switch>
         <Route path="/tour" component={TourPage}>
-        </Route>        
+        </Route>
+        <Route path="/review" component={ReviewPage}>
+        </Route>
+        <Route path="/accordion" component={AccordionPage}>
+        </Route>
+        <Route path="/menu" component={MenuPage}>
+        </Route>
+
       </Switch>
     </Router>
     
