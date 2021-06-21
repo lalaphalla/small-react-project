@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
-import './category.scss'
+import "./category.scss";
 
-const Categories = () => {
-return(
-    <div></div>
-)
-}
+const Categories = ({ filterItems, allCategories}) => {
+  return (
+    <div className="btn-container">
+      <button
+        className="filter-btn"
+        onClick={() => filterItems("all")}
+      >all</button>
 
-export default Categories
+      <button
+        className="filter-btn"
+        onClick={() => filterItems("breakfast")}
+      >Breakfast</button>
+    </div>
+  );
+};
+
+export default Categories;
