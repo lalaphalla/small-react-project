@@ -5,7 +5,9 @@ import TourPage from './pages/tours/tour'
 import ReviewPage from "./pages/reviews/review";
 import AccordionPage from "./pages/accordion/accordion";
 import MenuPage from "./pages/menu/menu";
-
+import TapsPage from "./pages/taps/taps";
+import './App.scss'
+import SliderPage from "./pages/slider/slider";
 function App() {
   return (
     <div>
@@ -28,6 +30,12 @@ function App() {
           <li>
             <Link to='/menu'>Menu</Link>
           </li>
+          <li>
+            <Link to='/tabs'>Tab</Link>
+          </li>
+          <li>
+            <Link to='/slider'>Slider</Link>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,6 +48,8 @@ function App() {
         <Route path="/accordion" component={AccordionPage}>
         </Route>
         <Route path="/menu" component={MenuPage}>
+        </Route>
+        <Route path="/slider" component={SliderPage} >
         </Route>
 
       </Switch>

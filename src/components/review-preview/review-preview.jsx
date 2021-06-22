@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import people from "./data";
 
 import {
-  FaChevronCircleLeft,
   FaChevronLeft,
   FaChevronRight,
   FaQuoteRight,
