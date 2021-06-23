@@ -5,7 +5,7 @@ import './tour-preview.scss'
 
 const TourPreview = ({ tours, removeTour}) => {
     return(
-        <section>
+        <section className="section">
             <div className="title">
                 <h2>Our Tour</h2>
             </div>

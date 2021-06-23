@@ -6,8 +6,9 @@ import ReviewPage from "./pages/reviews/review";
 import AccordionPage from "./pages/accordion/accordion";
 import MenuPage from "./pages/menu/menu";
 import TapsPage from "./pages/taps/taps";
-import './App.scss'
 import SliderPage from "./pages/slider/slider";
+import LoremIpsumPage from "./pages/lorem-ipsum/lorem-ipsum";
+import ColorGenratorPage from "./pages/color-generator/color-generator";
 function App() {
   return (
     <div>
@@ -36,6 +37,12 @@ function App() {
           <li>
             <Link to='/slider'>Slider</Link>
           </li>
+          <li>
+            <Link to='/lorem'>Lorem</Link>
+          </li>
+          <li>
+            <Link to='/color'>Color Generator</Link>
+          </li>
         </ul>
       </div>
     </div>
@@ -49,7 +56,13 @@ function App() {
         </Route>
         <Route path="/menu" component={MenuPage}>
         </Route>
+        <Route path="/tabs" component={TapsPage}>
+        </Route>
         <Route path="/slider" component={SliderPage} >
+        </Route>
+        <Route path="/lorem" component={LoremIpsumPage} >
+        </Route>
+        <Route path="/color" component={ColorGenratorPage} >
         </Route>
 
       </Switch>
