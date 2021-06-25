@@ -26,37 +26,44 @@ const TapsPage = () => {
   }
   const { company, date, duties, title } = job[value];
   return (
-    <section className="section">
-      <div className="title">
-        <h2>Experince</h2>
-      </div>
-      <div className="jobs-center">
-        {/* btn container */}
-        <div className="btn-container">
-        {job.map((item, index) => {
-            return(
-            <button key={index}
-            onClick={()=>setValue(index)}
-            className={`button-navigation ${index === value && 'active-btn'}`}>
-            {item.company}</button>
-            )
-        })}
+    <div className="taps-page">
+      <section className="section">
+        <div className="title">
+          <h2>Experince</h2>
         </div>
-        <article className="job-info">
-          <h3>{title}</h3>
-          <h4>{company}</h4>
-          <p className="job-date">{date}</p>
-          {duties.map((duty, index) => {
-            return (
-              <div className="job-desc" key={index}>
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-                <p>{duty}</p>
-              </div>
-            );
-          })}
-        </article>
-      </div>
-    </section>
+        <div className="jobs-center">
+          {/* btn container */}
+          <div className="btn-container">
+            {job.map((item, index) => {
+              return (
+                <button
+                  key={index}
+                  onClick={() => setValue(index)}
+                  className={`button-navigation ${
+                    index === value && "active-btn"
+                  }`}
+                >
+                  {item.company}
+                </button>
+              );
+            })}
+          </div>
+          <article className="job-info">
+            <h3>{title}</h3>
+            <h4>{company}</h4>
+            <p className="job-date">{date}</p>
+            {duties.map((duty, index) => {
+              return (
+                <div className="job-desc" key={index}>
+                  <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                  <p>{duty}</p>
+                </div>
+              );
+            })}
+          </article>
+        </div>
+      </section>
+    </div>
   );
 };
 export default TapsPage;

@@ -1,23 +1,25 @@
-.section{
+.tour-page {
+  .section {
     width: 90vw;
     margin: 0 auto;
     max-width: 620px;
-}
+  }
 
-.title{
+  .title {
     margin: 0;
     text-align: center;
     display: block;
     position: relative;
-    ::before{
-        content: '';
-        position: absolute;
-        display: inline;
-        width: 100%;
-        top: 100%;
-        left: 50%;
-        height: 1px;
-        background: #000;;
-        transform: translateX(-50%);
+    ::before {
+      content: "";
+      position: absolute;
+      display: inline;
+      width: 100%;
+      top: 100%;
+      left: 50%;
+      height: 1px;
+      background: #000;
+      transform: translateX(-50%);
     }
+  }
 }

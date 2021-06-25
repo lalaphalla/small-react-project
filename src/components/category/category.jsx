@@ -8,6 +8,7 @@ const Categories = ({ filterItems, categories }) => {
 
   console.log(categories);
   return (
+    <div className="category">
     <div className="btn-container">
       {categories.map((category, index) => {
         return (
@@ -17,6 +18,8 @@ const Categories = ({ filterItems, categories }) => {
         );
       })}
     </div>
+    </div>
+    
   );
 };
 

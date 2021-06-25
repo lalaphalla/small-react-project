@@ -24,34 +24,41 @@ const ColorGenratorPage = () => {
   };
 
   return (
-    <section className="section-color">
-      <div className="container">
-        <h3>Color</h3>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={color}
-            onChange={(e) => {
-              if (e.target.value.charAt(0) !== "#") {
-                setColor("#" + e.target.value);
-                return;
-              }
-              setColor(e.target.value);
-            }}
-            placeholder=""
-            className={`${error} ? 'error' : null`}
-          />
-          <button className="btn">Submit</button>
-        </form>
-      </div>
-      <section className="colors">
-        {list.map((color, id) => {
-          return (
-            <SingleColor key={id} {...color} index={id} hexColor={color.hex} />
-          );
-        })}
+    <div className="color-page">
+      <section className="section-color">
+        <div className="container">
+          <h3>Color</h3>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={color}
+              onChange={(e) => {
+                if (e.target.value.charAt(0) !== "#") {
+                  setColor("#" + e.target.value);
+                  return;
+                }
+                setColor(e.target.value);
+              }}
+              placeholder=""
+              className={`${error} ? 'error' : null`}
+            />
+            <button className="btn">Submit</button>
+          </form>
+        </div>
+        <section className="colors">
+          {list.map((color, id) => {
+            return (
+              <SingleColor
+                key={id}
+                {...color}
+                index={id}
+                hexColor={color.hex}
+              />
+            );
+          })}
+        </section>
       </section>
-    </section>
+    </div>
   );
 };
 export default ColorGenratorPage;

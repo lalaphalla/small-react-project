@@ -6,12 +6,15 @@ import './accordion.scss'
 const AccordionPage = () => {
 
     return(
+        <div className="accordion-page">
         <div className="main">
             <div className="container">
                 <h2>Questions and Answers about Login</h2>
                 <AccordionPreview />
             </div>
         </div>
+        </div>
+        
     )
 }
 
